@@ -6,7 +6,7 @@
 %define		devel %mklibname -d %{name}
 
 Name:		fmt
-Version:	8.0.1
+Version:	8.1.0
 Release:	1
 Summary:	Small, safe and fast formatting library
 Group:		Development/C++
