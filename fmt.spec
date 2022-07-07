@@ -1,12 +1,12 @@
 %define _disable_lto 1
 
-%define		major 8
-%define		minor 1
+%define		major 9
+%define		minor 0
 %define		libname %mklibname %{name} %{major}
 %define		devel %mklibname -d %{name}
 
 Name:		fmt
-Version:	8.1.1
+Version:	9.0.0
 Release:	1
 Summary:	Small, safe and fast formatting library
 Group:		Development/C++
