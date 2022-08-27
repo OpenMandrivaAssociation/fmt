@@ -6,7 +6,7 @@
 %define		devel %mklibname -d %{name}
 
 Name:		fmt
-Version:	9.0.0
+Version:	9.1.0
 Release:	1
 Summary:	Small, safe and fast formatting library
 Group:		Development/C++
@@ -54,5 +54,4 @@ This package contains the library for libfmt
 %{_libdir}/pkgconfig/%{name}.pc
 
 %files -n	%{libname}
-%{_libdir}/libfmt.so.%{major}
-%{_libdir}/libfmt.so.%{major}.%{minor}{,.*}
+%{_libdir}/libfmt.so.%{major}*
