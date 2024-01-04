@@ -4,7 +4,7 @@
 
 Summary:	Small, safe and fast formatting library
 Name:		fmt
-Version:	10.2.0
+Version:	10.2.1
 Release:	1
 Group:		Development/C++
 License:	BSD
