@@ -5,11 +5,13 @@
 Summary:	Small, safe and fast formatting library
 Name:		fmt
 Version:	10.2.1
-Release:	1
+Release:	2
 Group:		Development/C++
 License:	BSD
 URL:		https://fmtlib.org
 Source0:	https://github.com/fmtlib/fmt/archive/%{version}/%{name}-%{version}.tar.gz
+# fix tests with FMT_STATIC_THOUSANDS_SEPARATOR (mariadb)
+Patch1:		44c3fe1ebb466ab5c296e1a1a6991c7c7b51b72e.diff
 BuildRequires:	cmake
 BuildRequires:	ninja
 
