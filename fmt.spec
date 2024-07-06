@@ -4,16 +4,13 @@
 
 Summary:	Small, safe and fast formatting library
 Name:		fmt
-Version:	10.2.1
-Release:	2
+Version:	11.0.1
+Release:	1
 Group:		Development/C++
 License:	BSD
 URL:		https://fmtlib.org
 Source0:	https://github.com/fmtlib/fmt/archive/%{version}/%{name}-%{version}.tar.gz
-# fix tests with FMT_STATIC_THOUSANDS_SEPARATOR (mariadb)
-Patch1:		44c3fe1ebb466ab5c296e1a1a6991c7c7b51b72e.diff
-BuildRequires:	cmake
-BuildRequires:	ninja
+BuildSystem:	cmake
 
 %description
 fmt is an open-source formatting library for C++. It can be used as a safe
@@ -32,22 +29,9 @@ and cmake files for libfmt
 %package -n %{libname}
 Summary:	The libfmt libraries
 Group:		Development/C++
-# Not really, but we need to have some way to get rid of old
-# versioned libnames
-Obsoletes:	%{mklibname -d fmt 9} <= 9.1.0-2
 
 %description -n %{libname}
 This package contains the library for libfmt
-
-%prep
-%autosetup -p1
-%cmake -G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
 
 %files -n %{libname}
 %{_libdir}/libfmt.so.%{major}*
