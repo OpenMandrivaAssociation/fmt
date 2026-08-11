@@ -40,5 +40,6 @@ This package contains the library for libfmt
 %{_includedir}/%{name}/
 %{_libdir}/cmake/%{name}/
 %{_libdir}/libfmt.so
+%{_libdir}/libfmt-c.a
 %{_libdir}/pkgconfig/%{name}.pc
 
